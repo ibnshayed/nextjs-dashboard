@@ -2,12 +2,12 @@
 
 import { ColumnDef } from "@tanstack/react-table"
 
-import { labels, priorities, statuses } from "../data/data"
-import { Task } from "../data/schema"
 import { DataTableColumnHeader } from "./data-table-column-header"
 import { DataTableRowActions } from "./data-table-row-actions"
 import { Badge } from "@/components/ui/badge"
 import { Checkbox } from "@/components/ui/checkbox"
+import { Task } from "./data/schema"
+import { labels, priorities, statuses } from "./data/data"
 
 export const columns: ColumnDef<Task>[] = [
   {

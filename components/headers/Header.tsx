@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/breadcrumb";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { Separator } from "@radix-ui/react-separator";
+import { ThemeChanger } from "./ThemeChanger";
 import { UserNav } from "./UserNav";
 
 const Header = () => {
@@ -30,7 +31,8 @@ const Header = () => {
           </BreadcrumbList>
         </Breadcrumb>
 
-        <div className="ml-auto">
+        <div className="ml-auto flex items-center space-x-5">
+          <ThemeChanger />
           <UserNav />
         </div>
       </div>
