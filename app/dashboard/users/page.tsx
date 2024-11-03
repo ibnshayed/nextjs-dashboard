@@ -22,10 +22,7 @@ const Users = async () => {
   return (
     <div>
       <PageHeader title="Users" />
-      <DataTable
-        data={tasks}
-        columns={columns}
-      />
+      <DataTable data={tasks} columns={columns} enableRowSelection />
     </div>
   );
 };
