@@ -25,8 +25,6 @@ const Users = async () => {
       <DataTable
         data={tasks}
         columns={columns}
-        enableRowSelection
-        manualPagination
       />
     </div>
   );
