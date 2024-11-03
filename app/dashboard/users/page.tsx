@@ -1,14 +1,14 @@
+import { columns } from "@/app/dashboard/users/_components/columns";
+import { taskSchema } from "@/app/dashboard/users/data/schema";
 import PageHeader from "@/components/PageHeader";
-import { columns } from "@/components/tables/columns";
 import { DataTable } from "@/components/tables/data-table";
-import { taskSchema } from "@/components/tables/data/schema";
 import { promises as fs } from "fs";
 import path from "path";
 import { z } from "zod";
 
 async function getTasks() {
   const data = await fs.readFile(
-    path.join(process.cwd(), "components/tables/data/tasks.json")
+    path.join(process.cwd(), "app/dashboard/users/data/tasks.json")
   );
 
   const tasks = JSON.parse(data.toString());
@@ -22,7 +22,12 @@ const Users = async () => {
   return (
     <div>
       <PageHeader title="Users" />
-      <DataTable data={tasks} columns={columns} />
+      <DataTable
+        data={tasks}
+        columns={columns}
+        enableRowSelection
+        manualPagination
+      />
     </div>
   );
 };
